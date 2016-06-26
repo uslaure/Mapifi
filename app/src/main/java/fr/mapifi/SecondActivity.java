@@ -45,7 +45,7 @@ public class SecondActivity extends  MainActivity{
             @Override
             public void run() {
                 Mapper.WifiManager();
-                wifiList = Mapper.getWifiList();
+                ArrayList<networkObject> wifiList = Mapper.getWifiList();
                 for (int i = 0; i<wifiList.size(); i++) {
                     Log.i("Member name: ", wifiList.get(i).getIpName());
                     Log.i("Member name: ", wifiList.get(i).getIpAddress());
@@ -53,8 +53,13 @@ public class SecondActivity extends  MainActivity{
                 }
             }
         }).start();
-        networkObjectAdapter noAdapter = new networkObjectAdapter (SecondActivity.this, 0, wifiList);
-        listView.setAdapter(noAdapter);
+        networkObjectAdapter adbPerson;
+        ArrayList<networkObject> myListItems  = new ArrayList<networkObject>();
+
+//then populate myListItems
+
+        adbPerson= new networkObjectAdapter (SecondActivity.this, 0, (ArrayList<networkObject>) wifiList);
+        listView.setAdapter(adbPerson);
         return wifiList;
     }
 }

@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class NetworkMapper extends Thread {
 
-    List<networkObject> wifiList = new ArrayList<networkObject>();
+    ArrayList<networkObject> wifiList = new ArrayList<networkObject>();
 
     protected void onCreate(){
         wifiList = new ArrayList<networkObject>();
@@ -23,7 +23,7 @@ public class NetworkMapper extends Thread {
         WifiManager();
     }
 
-    public List getWifiList(){
+    public ArrayList getWifiList(){
         return this.wifiList;
     }
 
