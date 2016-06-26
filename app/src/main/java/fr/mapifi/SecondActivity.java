@@ -9,8 +9,9 @@ import android.app.Activity;
 import android.widget.ImageView;
 import java.net.InetAddress;
 import java.net.Socket;
-
+import java.util.ArrayList;
 import java.util.List;
+import fr.mapifi.networkObject;
 
 /**
  * Created by user on 22/06/2016.
@@ -18,7 +19,7 @@ import java.util.List;
 public class SecondActivity extends  MainActivity{
     ImageView imgView;
     WifiManager mainWifi;
-    List<ScanResult> wifiList;
+    List<networkObject> wifiList;
 
 
     @Override
@@ -27,6 +28,7 @@ public class SecondActivity extends  MainActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_activity);
         imgView = (ImageView) findViewById(R.id.img);
+        wifiList = new ArrayList<networkObject>();
 
         new Thread(new Runnable() {
             @Override
@@ -37,10 +39,11 @@ public class SecondActivity extends  MainActivity{
 
     }
 
-    public void testWifiManager(){
+    public List testWifiManager(){
 
         int timeout = 500;
         int port = 1234;
+        networkObject NetworkObject = new networkObject();
 
         try {
             String currentIP = InetAddress.getLocalHost().toString();
@@ -58,6 +61,9 @@ public class SecondActivity extends  MainActivity{
                 if (InetAddress.getByName(host).isReachable(timeout)){
                     System.out.println(host + " is reachable");
                     System.out.println(InetAddress.getByName(host).getHostName());
+                    NetworkObject.setIpAddress(host);
+                    NetworkObject.setipName(InetAddress.getByName(host).getHostName());
+                    wifiList.add(NetworkObject);
                     try {
                         Socket connected = new Socket(subnet, port);
                     }
@@ -71,6 +77,7 @@ public class SecondActivity extends  MainActivity{
             System.out.print("error");
             System.out.println(e);
         }
+        return wifiList;
     }
 
     public static String getSubnet(String currentIP) {
