@@ -23,11 +23,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener  
     @Override
     public void onClick(View view) {
 
-        Intent inent = new Intent(this, SecondActivity.class);
+        Intent intent = new Intent(this, SecondActivity.class);
 
         // calling an activity using <intent-filter> action name
         //  Intent inent = new Intent("com.hmkcode.android.ANOTHER_ACTIVITY");
 
-        startActivity(inent);
+        startActivity(intent);
     }
 }

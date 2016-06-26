@@ -5,7 +5,9 @@
     <ImageView
         android:id="@+id/img"
         android:src="@drawable/wifi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:layout_marginRight="140px"
+        android:layout_marginTop="90px"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

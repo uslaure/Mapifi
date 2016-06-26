@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\user\AndroidStudioProjects\Mapifi\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Users\user\AndroidStudioProjects\Mapifi\app\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/home/florian-chazal/PhpstormProjects/Mapifi/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/florian-chazal/PhpstormProjects/Mapifi/app/src/debug/shaders"/></dataSet></merger>
