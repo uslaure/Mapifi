@@ -20,11 +20,11 @@ public class networkObject {
         this.ipAddress = ipAddress;
     }
 
-    public void setipName(String ipName){
+    public void setIpName(String ipName){
         this.ipName = ipName;
     }
 
-    public String getipName(){
+    public String getIpName(){
         return this.ipName;
     }
 
