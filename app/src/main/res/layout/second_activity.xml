@@ -10,4 +10,22 @@
         android:layout_marginRight="140px"
         android:layout_marginTop="90px"
         android:layout_gravity="center_horizontal" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list" />
+    <TextView
+        android:id="@+id/display_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/display_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/display_name"
+        android:layout_below="@+id/display_name"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 </LinearLayout>
